@@ -6,7 +6,7 @@ export default class FilterOrgBRecords extends LightningElement {
 
 	data;
     filterByAccountName='Name';
-    filterByAccountIndustry='Industry';
+    // filterByAccountIndustry='Industry';
 	fullTableData= [];
     filteredData = [];
 
@@ -42,26 +42,29 @@ export default class FilterOrgBRecords extends LightningElement {
 
     }
     
-    Industryvalue='';
-    searchIndustryKeyword(event) {
-        this.Industryvalue = event.target.value;
+    // Industryvalue='';
+    // searchIndustryKeyword(event) {
+    //     this.Industryvalue = event.target.value;
 
-    }
+    // }
 
    
 
 
    
     handleNameKeyword(){
-                // if(this.searchNameValue!=null ){}
-            
-            // if(this.searchNameValue.map( (vl)=>{vl.length>2}) ){}
-                // this.filteredData = this.fullTableData.filter( (eachrec) =>{                            
-                    //     const val =  eachrec[Name]? eachrec[Name]:''                            
-                    //     // return this.searchNameValue.includes(v);
-                    //     // this.searchNameValue.includes(val);
-                    //     return val.toLowerCase().includes(this.Namevalue)                            
-                    // })
+
+
+        // this.filteredData = this.fullTableData.filter( (eRec) =>{ 
+        //     return eRec[this.value.forEach( (v)=>{
+        //         const v1 =v.toLowerCase();
+        //         return stringArray.forEach(val => {
+        //         return console.log(v1.includes(val) )
+                
+        //         });
+        //     })         ]  
+        // })
+        
             
             if(this.Namevalue!=null&&this.Namevalue.length>2){ 
                    this.filteredData = this.fullTableData.filter( (eachrec) =>{ 
@@ -77,18 +80,18 @@ export default class FilterOrgBRecords extends LightningElement {
 
 
    
-        handleIndustryKeyword(){
+        // handleIndustryKeyword(){
 
-            if(this.Industryvalue!=null){ 
-                this.filteredData = this.fullTableData.filter( (eachrec) =>{ 
-                    const ival = eachrec[this.filterByAccountIndustry] ? eachrec[this.filterByAccountIndustry]:'';
-                    return ival.toLowerCase().includes(this.Industryvalue);
-                })
+        //     if(this.Industryvalue!=null){ 
+        //         this.filteredData = this.fullTableData.filter( (eachrec) =>{ 
+        //             const ival = eachrec[this.filterByAccountIndustry] ? eachrec[this.filterByAccountIndustry]:'';
+        //             return ival.toLowerCase().includes(this.Industryvalue);
+        //         })
 
-            }else{
-                this.filteredData=[...this.fullTableData];
-            }
-        }
+        //     }else{
+        //         this.filteredData=[...this.fullTableData];
+        //     }
+        // }
 
 
     MoreOptions= false;
@@ -110,22 +113,7 @@ export default class FilterOrgBRecords extends LightningElement {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
 
 
 
